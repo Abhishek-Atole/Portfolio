@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000;
+  color: #fff;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, 
+      rgba(255, 255, 255, .05) 25%, 
+      rgba(255, 255, 255, .05) 26%, 
+      transparent 27%, transparent 74%, 
+      rgba(255, 255, 255, .05) 75%, 
+      rgba(255, 255, 255, .05) 76%, 
+      transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, 
+      rgba(255, 255, 255, .05) 25%, 
+      rgba(255, 255, 255, .05) 26%, 
+      transparent 27%, transparent 74%, 
+      rgba(255, 255, 255, .05) 75%, 
+      rgba(255, 255, 255, .05) 76%, 
+      transparent 77%, transparent);
+  background-size: 50px 50px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(37, 99, 235, 0.5);
+}
+
+.certificate-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(37, 99, 235, 0.5);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  border-left: 2px solid rgba(37, 99, 235, 0.5);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2563eb;
+}
