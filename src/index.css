@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s, left 0.3s;
+}
+
+nav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -21,12 +54,6 @@ body {
       rgba(255, 255, 255, .05) 76%, 
       transparent 77%, transparent);
   background-size: 50px 50px;
-}
-
-.text-gradient {
-  background: linear-gradient(90deg, #2563eb, #38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .skill-icon {

@@ -1,6 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_94aaq0h', 'template_70e92af', e.target as HTMLFormElement, 'hdRGilHqSmlzUa-_k')
+      .then((result) => {
+        console.log(result.text);
+        setFormSubmitted(true);
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 3000); // Show the thank you message for 3 seconds
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   return (
     <section id="contact" className="py-20 bg-dark">
       <div className="container mx-auto max-w-6xl px-4">
@@ -26,44 +44,59 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="bg-white/5 rounded-lg p-8">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
-                  />
+            {formSubmitted ? (
+              <div className="text-center text-white">
+                <h3 className="text-2xl font-bold mb-4">Thank You!</h3>
+                <p>Your message has been sent successfully. I will get back to you soon.</p>
+              </div>
+            ) : (
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="first_name"
+                      placeholder="First Name"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="last_name"
+                      placeholder="Last Name"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
+                      required
+                    />
+                  </div>
                 </div>
                 <div>
                   <input
-                    type="text"
-                    placeholder="Last Name"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
+                    required
                   />
                 </div>
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Message"
-                  rows={6}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 resize-none"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-3 px-6 rounded-lg hover:opacity-90 transition-opacity font-semibold"
-              >
-                SEND MESSAGE
-              </button>
-            </form>
+                <div>
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    rows={6}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 resize-none"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-3 px-6 rounded-lg hover:opacity-90 transition-opacity font-semibold"
+                >
+                  SEND MESSAGE
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

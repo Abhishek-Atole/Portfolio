@@ -1,14 +1,15 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Link } from 'react-scroll';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-32 pb-20 px-4 flex items-center">
+    <section className="min-h-screen pt-32 pb-20 px-4 flex items-center transition-all duration-500">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center text-center">
           <div className="w-48 h-48 mb-8 relative">
             <img
-              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80"
+              src="/dist/assets/images/profilepic.jpg"
               alt="Profile"
               className="rounded-full w-full h-full object-cover border-4 border-blue-500 shadow-lg shadow-blue-500/50"
             />
@@ -25,18 +26,26 @@ export default function Hero() {
               and networking, with a strong foundation in system architecture and application development.
             </p>
             <div className="flex gap-4 justify-center mb-8">
-              <a
-                href="#contact"
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-blue-600/30"
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-blue-600/30 cursor-pointer"
               >
                 CONNECT
-              </a>
+              </Link>
               <a
-                href="/resume.pdf"
+                href="dist/assets/files/Abhishek Himmatrao Atole.pdf"
                 className="px-8 py-3 border-2 border-blue-600 text-white rounded-full hover:bg-blue-600/10 transition-colors flex items-center gap-2 shadow-lg shadow-blue-600/20"
               >
                 <Download size={20} />
                 RESUME
+              </a>
+              <a
+                href="mailto:abhiatole03@gmail.com"
+                className="px-8 py-3 bg-gradient-to-r from-green-600 to-green-400 text-white rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-green-600/30 cursor-pointer"
+              >
+                HIRE ME
               </a>
             </div>
             <div className="flex gap-6 justify-center">
@@ -46,7 +55,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="p-3 text-gray-400 hover:text-white transition-colors hover:scale-110 transform"
               >
-                <Github size={24} />
+                <Github size={24} color="#4078c0" />
               </a>
               <a
                 href="https://linkedin.com/in/abhishekatole"
@@ -54,13 +63,13 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="p-3 text-gray-400 hover:text-white transition-colors hover:scale-110 transform"
               >
-                <Linkedin size={24} />
+                <Linkedin size={24} color="#0077b5" />
               </a>
               <a
                 href="mailto:abhiatole03@gmail.com"
                 className="p-3 text-gray-400 hover:text-white transition-colors hover:scale-110 transform"
               >
-                <Mail size={24} />
+                <Mail size={24} color="#d44638" />
               </a>
             </div>
           </div>
