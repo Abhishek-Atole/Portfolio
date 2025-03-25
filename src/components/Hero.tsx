@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           <div className="w-48 h-48 mb-8 relative">
             <img
-              src="images/profilepic.jpg"
+              src="images\profilepic.jpg"
               alt="Profile"
               className="rounded-full w-full h-full object-cover border-4 border-blue-500 shadow-lg shadow-blue-500/50"
             />
