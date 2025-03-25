@@ -12,5 +12,5 @@ jobs:
       - name: Run DataDog Synthetics Tests
         uses: DataDog/synthetics-ci-github-action@87b505388a22005bb8013481e3f73a367b9a53eb
         with:
-          api_key: ${{ secrets.DATADOG_API_KEY }}
-          app_key: ${{ a3c683dc3ad7f22d32fefe4138f1b559 }}
+          api_key: ${{ 32def7c2-b68c-480e-91b3-9bd781ccb280 }}
+          app_key: ${{ 5958c771a68834f29ae075472d5fdbb2 }}

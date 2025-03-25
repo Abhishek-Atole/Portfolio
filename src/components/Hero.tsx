@@ -20,7 +20,7 @@ export default function Hero() {
               I'm <span className="text-gradient">Abhishek Atole</span> a Software{' '}
               <span className="text-gradient">Developer</span>
             </h1>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-xl text-gray-400 mb-8 text-justify">
               Software Developer with expertise in C, C++, and web development. Experienced in IoT, embedded systems, and automation. 
               Proficient in developing and optimizing software solutions with hands-on project experience. Certified in C and C++ programming 
               and networking, with a strong foundation in system architecture and application development.

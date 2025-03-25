@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link, Element } from 'react-scroll';
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
@@ -18,19 +18,22 @@ function App() {
               ABHISHEK ATOLE
             </a>
             <div className="flex gap-6">
-              <Link to="about" smooth={true} duration={500} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
+              <Link to="about" smooth={true} duration={200} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
                 About
               </Link>
-              <Link to="education" smooth={true} duration={500} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
+              <Link to="skills" smooth={true} duration={200} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
+                Skills
+              </Link>
+              <Link to="education" smooth={true} duration={200} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
                 Education
               </Link>
-              <Link to="projects" smooth={true} duration={500} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
+              <Link to="projects" smooth={true} duration={200} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
                 Projects
               </Link>
-              <Link to="certificates" smooth={true} duration={500} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
+              <Link to="certificates" smooth={true} duration={200} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
                 Certificates
               </Link>
-              <Link to="contact" smooth={true} duration={500} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
+              <Link to="contact" smooth={true} duration={200} className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:translate-y-1 cursor-pointer">
                 Contact
               </Link>
             </div>
@@ -40,19 +43,22 @@ function App() {
 
       <main className="pt-20">
         <Hero />
-        <Element name="about">
+        <Element name="about" className="fade-in-up">
           <About />
         </Element>
-        <Element name="education">
+        <Element name="skills" className="fade-in-up">
+          <Skills />
+        </Element>
+        <Element name="education" className="fade-in-up">
           <Education />
         </Element>
-        <Element name="projects">
+        <Element name="projects" className="fade-in-up">
           <Projects />
         </Element>
-        <Element name="certificates">
+        <Element name="certificates" className="fade-in-up">
           <Certificates />
         </Element>
-        <Element name="contact">
+        <Element name="contact" className="fade-in-up">
           <Contact />
         </Element>
       </main>

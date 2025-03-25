@@ -16,7 +16,7 @@ nav a {
   position: relative;
   display: inline-block;
   padding: 0.5rem 1rem;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.2s, transform 0.2s; /* Reduced duration */
 }
 
 nav a::before {
@@ -27,7 +27,7 @@ nav a::before {
   width: 0;
   height: 2px;
   background-color: currentColor;
-  transition: width 0.3s, left 0.3s;
+  transition: width 0.2s, left 0.2s; /* Reduced duration */
 }
 
 nav a:hover::before {
@@ -64,11 +64,11 @@ body {
   justify-content: center;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease; /* Reduced duration */
 }
 
 .skill-icon:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px); /* Reduced space */
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -77,11 +77,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease; /* Reduced duration */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px); /* Reduced space */
   border-color: rgba(37, 99, 235, 0.5);
 }
 
@@ -90,11 +90,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease; /* Reduced duration */
 }
 
 .certificate-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px); /* Reduced space */
   border-color: rgba(37, 99, 235, 0.5);
 }
 
@@ -114,4 +114,34 @@ body {
   height: 10px;
   border-radius: 50%;
   background: #2563eb;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Reduced space */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Reduced space */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out; /* Reduced duration */
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.5s ease-out; /* Reduced duration */
 }
