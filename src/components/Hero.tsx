@@ -15,12 +15,12 @@ export default function Hero() {
             />
             <div className="absolute inset-0 rounded-full border-4 border-blue-500/30 animate-pulse"></div>
           </div>
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">
+          <div className="max-w-3x3">
+            <h1 className="max-w-3x1 text-5xl font-bold mb-6">
               I'm <span className="text-gradient">Abhishek Atole</span> a Software{' '}
               <span className="text-gradient">Developer</span>
             </h1>
-            <p className="text-xl text-gray-400 mb-8 text-justify">
+            <p className="text-xl max-w-3x3 text-gray-400 mb-8 text-justify">
               Software Developer with expertise in C, C++, and web development. Experienced in IoT, embedded systems, and automation. 
               Proficient in developing and optimizing software solutions with hands-on project experience. Certified in C and C++ programming 
               and networking, with a strong foundation in system architecture and application development.
