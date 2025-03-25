@@ -35,7 +35,7 @@ export default function Hero() {
                 CONNECT
               </Link>
               <a
-                href="pdfs/Abhishek Himmatrao Atole.pdf"
+                href="images/Abhishek Himmatrao Atole.pdf"
                 className="px-8 py-3 border-2 border-blue-600 text-white rounded-full hover:bg-blue-600/10 transition-colors flex items-center gap-2 shadow-lg shadow-blue-600/20"
               >
                 <Download size={20} />
