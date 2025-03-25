@@ -6,7 +6,7 @@ export default function Certificates() {
     {
       title: 'C Programming',
       issuer: 'LinkedIn Learning',
-      image: 'images/c prog.jpg',
+      image: 'dist/assets/c Embed.jpg',
       link: 'https://www.linkedin.com/learning/certificates/8cbed9814a163b91f00feac525839739085741dd84c32f2e3e6565c290c2420e?trk=share_certificate'
     },
     {
