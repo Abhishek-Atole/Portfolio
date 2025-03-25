@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'Prosthetic Hand Gestures Classification',
     description: 'Developed an AI-powered prosthetic hand gesture classification system using CNNs, achieving 94% precision rate. Integrated IoT for real-time signal processing.',
-    image: 'dist/assets/images/prostheticgestures.jpeg',
+    image: 'images/prostheticgestures.jpeg',
     github: 'https://github.com/Abhishek-Atole/Classification-of-an-EMG-Signal-Using-CNN.git',
     demo: '#',
     tags: ['Machine Learning', 'IoT', 'Python', 'CNNs']

@@ -9,7 +9,7 @@ export default function About() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img
-              src="/dist/assets/images/profilepic.jpg"
+              src="images/profilepic.jpg"
               alt="Profile"
               className="rounded-lg w-full h-auto object-cover shadow-lg"
             />
@@ -26,7 +26,7 @@ export default function About() {
             </p>
             <div className="flex gap-4 justify-center mb-8">
               <a
-                href="dist/assets/files/Abhishek Himmatrao Atole.pdf"
+                href="pdfs/Abhishek Himmatrao Atole.pdf"
                 className="px-8 py-3 border-2 border-blue-600 text-white rounded-full hover:bg-blue-600/10 transition-colors flex items-center gap-2 shadow-lg shadow-blue-600/20"
               >
                 <Download size={20} />
