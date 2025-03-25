@@ -13,4 +13,4 @@ jobs:
         uses: DataDog/synthetics-ci-github-action@87b505388a22005bb8013481e3f73a367b9a53eb
         with:
           api_key: ${{ secrets.DATADOG_API_KEY }}
-          app_key: ${{ secrets.DATADOG_APP_KEY }}
+          app_key: ${{ a3c683dc3ad7f22d32fefe4138f1b559 }}
